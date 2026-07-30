@@ -1,7 +1,11 @@
 class Solution {
-    public int minimumPushes(String A) {
-        int q = A.length() >> 3;
-        int r = A.length() & 7;
-        return ((q << 2) + r) * (q + 1);
+    public int minimumPushes(String word) {
+
+        int len = word.length();
+
+        int groups = len / 8;      // Complete groups of 8 letters
+        int rem = len % 8;         // Remaining letters
+
+        return (4 * groups + rem) * (groups + 1);
     }
 }
