@@ -7,8 +7,8 @@ class Solution {
             int digit=n%10;
             sum+=digit;
             mul*=digit;
-            n=n/10;
+            n/=10;
         }
-        return og % (sum+mul) ==0;
+        return (og % (sum+mul) ==0);
     }
 }
