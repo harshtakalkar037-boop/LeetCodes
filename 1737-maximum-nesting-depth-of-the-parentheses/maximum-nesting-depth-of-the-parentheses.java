@@ -7,9 +7,10 @@ class Solution {
                 depth--;
                 continue;
             }
-            if(c!='(') continue;
+            if(c!='(')continue;
             depth++;
             r=Math.max(r,depth);
+
         }
         return r;
     }
