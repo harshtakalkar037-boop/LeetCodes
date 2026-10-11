@@ -11,6 +11,8 @@ class Solution {
             if(candies[i]+extraCandies<max){
                 list.add(false);
             }else list.add(true);
+
+            max=Math.max(max,candies[i]);
         }
 
         return list;
