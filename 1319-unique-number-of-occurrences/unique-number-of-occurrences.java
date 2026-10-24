@@ -6,8 +6,9 @@ class Solution {
         }
         Set<Integer> set=new HashSet<>();
         for(int j:frq.values()){
+            if(set.contains(j)) return false;
             set.add(j);
         }
-        return frq.size()==set.size();
+        return true;
     }
 }
